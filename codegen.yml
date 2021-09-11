@@ -1,0 +1,14 @@
+overwrite: true
+# schema: "https://graphqlhero.com/api/demos/schema-and-type-system/end"
+schema: "https://graphqlhero.com/api/demos/arguments-and-variables/human-by-id"
+documents: 'src/**/*.{ts,tsx}'
+generates:
+  src/__generated__/graphql.ts: 
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+    config:
+      dedupeOperationSuffix: true
+      skipTypename: true
+      immutableTypes: true
+      onlyOperationTypes: true
